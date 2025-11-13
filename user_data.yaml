@@ -1,0 +1,13 @@
+#cloud-config
+
+locale: en_US.UTF-8
+
+users:
+- name: test
+  lock-passwd: false
+  lock_passwd: false
+  plain_text_passwd: test
+  sudo: ALL=(ALL) NOPASSWD:ALL
+  shell: /bin/bash
+  ssh_authorized_keys:
+    - ssh-rsa xxxxxxxxxx
