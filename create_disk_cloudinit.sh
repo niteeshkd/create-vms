@@ -1,18 +1,17 @@
 #!/bin/bash
 #tmpdir=$(mktemp -d)
 tmpdir=./images/tmp/
-identity_file="$HOME/.ssh/id_rsa.pub"
+identity_file="$HOME/.ssh/id_ed25519.pub"
 
 if [[ $# -lt 2 ]]; then
     echo "$0 <vm_num> <src_img> [<size_GB>]"
     echo "where"
     echo " vm_num   = Seqeunce number of the VM"
     echo " src_img  = Location of the .img file with prefix URL or PATH"
-    echo " size_GB  = Size of the disk in GB"
+    echo " size_GB  = Size of the disk in GB (default=10GB)"
     echo "Examples:"
     echo "$0 1 URL=https://cloud-images.ubuntu.com/focal/current/focal-server-cloudimg-amd64.img"
-    echo "$0 2 URL=https://cloud-images.ubuntu.com/jammy/current/jammy-server-cloudimg-amd64.img"
-    echo "$0 0 URL=https://download.fedoraproject.org/pub/fedora/linux/releases/35/Cloud/x86_64/images/Fedora-Cloud-Base-35-1.2.x86_64.qcow2 20"
+    echo "$0 2 URL=https://download.fedoraproject.org/pub/fedora/linux/releases/35/Cloud/x86_64/images/Fedora-Cloud-Base-35-1.2.x86_64.qcow2 20"
     echo "$0 3 PATH=/home/niteesh/sevtest/images/focal-server-cloudimg-amd64.img 20"
     exit 1
 fi
