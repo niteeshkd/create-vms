@@ -341,7 +341,6 @@ if [[ $CREATE_VM_ENV =~ "DIRECT" ]]; then
 fi
 
 #Record the arguments of the program for this VM before executing Qemu
-tmpFile=$(mktemp)
 prog_base=$(basename $0)
 prog_vm="$prog_base $1"
 shift
