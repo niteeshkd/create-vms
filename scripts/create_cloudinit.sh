@@ -9,7 +9,7 @@ if [[ $# -lt 2 ]]; then
     echo " vm_num      = Seqeunce number of the VM"
     echo " user_data   = User data file for cloud init"
     echo "Examples:"
-    echo "$0 1 user_data.yaml"
+    echo "$0 1 cloud-init/user_data.yaml"
     exit 1
 fi
 
